@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 20px;
+        }
+        table, td, th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td{
+            height:20px;
+            width: 100px;
+            text-align: center;
+        }
+        caption{
+            font-weight: 900; 
+        }
+    </style>
+
+    <script>
+        var arrName = ["이지원", "이온유"];
+
+        var arrOrder = new Array();
+        var LENGTH =arrName.length;
+
+        function makeOrder(){
+           for(var i=0; i<LENGTH; i++){
+                arrOrder[i] = null;
+            }
+            var rn = 0;
+            for(var i=0; i<LENGTH; i++){
+                rn = Math.floor(Math.random() * LENGTH);
+  
+                while(existName(arrName[rn])== true){
+                    rn = Math.floor(Math.random() * LENGTH);
+                }
+                arrOrder[i] = arrName[rn];
+         
+            }
+            document.write("<table>");
+            document.write("<caption>발표순서 </caption>");
+            document.write("<th>순번</th><th>이름</th>");
+            for(var i=0; i<arrOrder.length; i++){
+                document.write("<tr>");
+                document.write("<td>" +(i+1) + "</td><td> "+ arrOrder[i]+"</td>");
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        }
+        function existName(name)
+        {
+            for(var i=0; i<arrName.length; i++){
+                if(arrOrder[i] == null)
+                    continue;
+
+                if (arrOrder[i] == name)
+                    return true;
+               
+            }
+            return false;
+        }
+        makeOrder();
+    </script>
+</head>
+<body>
+    <!-- <button onclick="order()">발표순서</button> -->
+</body>
+</html>
