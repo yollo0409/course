@@ -88,3 +88,4 @@ document.write(today);
 ![storm](./images/storm.jpg)
 ![pf2](https://user-images.githubusercontent.com/56223139/165875437-2ec80b22-6709-44b5-9e67-e60758663dfb.png)
 ![cityscape](https://cdn.pixabay.com/photo/2022/03/27/15/03/cityscape-7095358_960_720.jpg)
+![europe](https://cdn.pixabay.com/photo/2018/08/31/03/26/europe-3643773_960_720.jpg)
